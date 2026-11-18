@@ -8,7 +8,13 @@
     "scheme": "tecnmguia",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos",
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos",
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to use your camera",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to use your microphone"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -17,7 +23,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.anonymous.TecNMGuia"
     },
     "web": {
       "output": "server",
@@ -32,7 +39,12 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-font",
+      "expo-image",
+      "expo-status-bar",
+      "expo-web-browser",
+      "@reactvision/react-viro"
     ],
     "experiments": {
       "typedRoutes": true,
