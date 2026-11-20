@@ -3,22 +3,27 @@
     "name": "toolbox-nativa",
     "slug": "toolbox-nativa",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos acceso a tu cámara para tomar fotos de perfil.",
+        "NSPhotoLibraryAddUsageDescription": "Necesitamos permiso para guardar la foto en tu galería.",
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicación para mostrarte en el mapa.",
+        "NSContactsUsageDescription": "Necesitamos acceder a tus contactos para compartirlos."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "READ_CONTACTS"
+      ]
     }
   }
 }
